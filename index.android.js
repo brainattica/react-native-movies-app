@@ -77,14 +77,14 @@ class MoviesBox extends React.Component {
           actions={[{title: 'Settings', show: 'always'}]}
           onActionSelected={this.onActionSelected} />
         <Container>
+          <SearchInput onChangeText={this.onChangeText.bind(this)}/>
           <ScrollView>
-          {
-            this.state.movies.map(movie => {
-              return <MovieItem title={movie.Title} year={movie.Year} poster={movie.Poster} type={movie.Type} />
-            })
-          }
-        </ScrollView>
-
+            {
+              this.state.movies.map(movie => {
+                return <MovieItem title={movie.Title} year={movie.Year} poster={movie.Poster} type={movie.Type} />
+              })
+            }
+          </ScrollView>
         </Container>
       </View>
     );

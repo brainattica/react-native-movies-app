@@ -23,7 +23,8 @@ var {
   View,
   Image,
   Animated,
-  ScrollView
+  ScrollView,
+  Navigator
 } = React;
 
 class MoviesBox extends React.Component {
@@ -64,7 +65,6 @@ class MoviesBox extends React.Component {
             })
           }
         </ScrollView>
-
       </Container>
     );
   }
